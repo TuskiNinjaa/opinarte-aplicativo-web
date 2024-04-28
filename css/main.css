@@ -1,6 +1,31 @@
 * {
-    margin: 0px;
-    padding: 0px;
     box-sizing: border-box;
     font-family: Arial, Helvetica, sans-serif;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    font-size: 25px;
+    height: 100vh;
+    width: auto;
+}
+
+button {
+    background: none;
+    border: none;
+    font-size: 25px;
+    outline: none;
+    text-align: center;
+
+    &:hover {
+        cursor: pointer;
+    }
+}
+
+input[type=text] {
+    background-color: transparent;
+    border: none;
+    font-size: 25px;
+    outline: none;
 }
