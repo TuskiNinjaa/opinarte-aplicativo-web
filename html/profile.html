@@ -1,29 +1,29 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="pt-br">
 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/navigation.css">
+    <link rel="stylesheet" href="../css/navigationbar.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link rel="stylesheet" href="../css/profile.css">
 
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
-    <title>Document</title>
+    <title>Perfil</title>
 </head>
 
 <body>
-    <nav>
+    <nav class="navigationbar">
         <a class="logo">OpinArte</a>
 
-        <search>
+        <search class="navigationbar__search">
             <input type="text" placeholder="Busque no OpinArte">
-            <button class="search__button">
+            <button type="submit" class="search__button">
                 <i class="fa-solid fa-magnifying-glass fa-1x"></i>
             </button>
         </search>
 
-        <menu>
+        <menu class="navigationbar__menu">
             <li><button class="menu__movies" href="">Filmes</button></li>
             <li><button class="menu__series" href="">Séries</button></li>
             <li><button class="menu__books" href="">Livros</button></li>
@@ -31,30 +31,59 @@
         </menu>
     </nav>
 
-    <section>
-        <div class="profile__left">
-            <div class="data">
-                <img class="data__image" src="../img/galo.jpg" alt="Imagem de um galo">
-                <div class="data__info">
-                    <ul class="data__list">
-                        <li>Nome: <input type="text" placeholder="SeuNome" readonly></li>
-                        <li>Email: <input type="text" placeholder="SeuEmail" readonly></li>
-                        <li>Data de aniversário: <input type="text" placeholder="DD/MM/AAAA" readonly></li>
-                    </ul>
-                    <div class="data__buttonlist">
-                        <button href="">Trocar senha</button>
-                        <button href="">Atualizar dados</button>
-                    </div>
+    <main>
+        <section class="profile">
+            <div class="profile__image"><img src="../img/galo.jpg" alt="Imagem do perfil"></div>
+
+            <div class="profile__info">
+                <h1>Dados do usuário:</h1>
+                <form action="" method="get" class="form">
+                    <label for="">Nome: <input type="text" name="" id="" placeholder="SeuNome" disabled></label>
+                    <label for="">Email: <input type="text" name="" id="" placeholder="SeuEmail" disabled></label>
+                    <label for="">Data de aniverário: <input type="date" name="" id="" disabled></label>
+                </form>
+                <div class="profile__button">
+                    <button>Trocar senha</button><button>Atualizar dados</button>
                 </div>
+
+        </section>
+
+        <section class="addartwork">
+            <h1>Adicione uma obra:</h1>
+            <div class="addartwork__middle">
+                <div class="addartwork__image">
+                    <input type="image" src="../img/coraline.jpg" alt="">
+                </div>
+                <form class=" addartwork__form" action="">
+                    <label for="">Nome do file:</label>
+                    <input type="text" name="" id="" placeholder="NomeFilme">
+                    <label for="">Ano:</label>
+                    <input type="text" name="" id="" placeholder="AnoFilme" disabled>
+                    <label for="">Autores:</label>
+                    <input type="text" name="" id="" placeholder="AutoresFilme" disabled>
+                    <label for="">Resenha do filme:</label>
+                    <input type="text" name="" id="" placeholder="ResenhaFilme" disabled>
+                    <label for="">Editora:</label>
+                    <input type="text" name="" id="" placeholder="EditoraFilme" disabled>
+                </form>
             </div>
-            <div class="addwork">
-                add movie
+            <div class="addartwork__button">
+                <button>Trocar senha</button>
             </div>
-        </div>
-        <div class="critics">
-            critics
-        </div>
-    </section>
+        </section>
+
+        <section class="critic">
+            <div class="critic__post">sample</div>
+            <div class="critic__post">sample</div>
+            <div class="critic__post">sample</div>
+            <div class="critic__post">sample</div>
+            <div class="critic__post">sample</div>
+            <div class="critic__post">sample</div>
+            <div class="critic__post">sample</div>
+            <div class="critic__post">sample</div>
+            <i class="fa-solid fa-magnifying-glass fa-1x"></i>
+        </section>
+    </main>
 </body>
 
 </html>
