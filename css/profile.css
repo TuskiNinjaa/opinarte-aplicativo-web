@@ -1,12 +1,12 @@
 main {
     display: grid;
     gap: 30px;
-    height: 120vh;
+    height: 100vh;
     margin: 30px;
 
     grid-template-areas:
-        "profile critic critic critic"
-        "add critic critic critic"
+        "profile critic critic critic critic critic critic"
+        "add critic critic critic critic critic critic"
     ;
 }
 
@@ -16,36 +16,23 @@ main {
     display: flex;
     flex-direction: column;
     grid-area: profile;
-    justify-content: space-between;
-
-    & div {
-
-        margin: 3%
-    }
+    justify-content: space-around;
 }
 
 .profile__image {
     height: 200px;
     width: 200px;
-}
-
-.profile__image img {
-    height: 100%;
     object-fit: cover;
-    width: 100%;
 }
 
 .profile__info {
     background-color: var(--palette2);
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
     width: 90%;
 
-    & h1,
-    form,
-    div {
-        margin: 10px;
+    & * {
+        margin: 5px;
     }
 }
 
@@ -56,15 +43,15 @@ main {
 
 .profile__button {
     display: flex;
-    height: 40px;
     justify-content: space-around;
 }
 
 .profile__button button {
     background-color: var(--palette0);
-    border-radius: 40px;
+    border-radius: 50px;
+    font-weight: bold;
     height: 40px;
-    width: 45%;
+    width: 40%;
 
     &:hover {
         background-color: white;
@@ -77,15 +64,11 @@ main {
     display: flex;
     flex-direction: column;
     grid-area: add;
-    justify-content: space-between;
-
-    & div,
-    h1 {
-        margin: 10px;
-    }
+    justify-content: space-around;
 }
 
 .addartwork__middle {
+    background-color: var(--palette0);
     align-items: center;
     display: flex;
     justify-content: space-around;
@@ -93,22 +76,15 @@ main {
 }
 
 .addartwork__image {
-    background-color: red;
-    display: flex;
     height: 200px;
     width: 150px;
-}
-
-.addartwork__image input {
-    height: 100%;
     object-fit: cover;
-    width: 100%;
 }
 
 .addartwork__form {
     display: flex;
     flex-direction: column;
-    width: 70%;
+    width: 50%;
 }
 
 .addartwork__button {
@@ -130,7 +106,6 @@ main {
     display: flex;
     flex-direction: column;
     grid-area: critic;
-    height: 100%;
     overflow-x: auto;
 }
 

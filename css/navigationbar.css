@@ -3,14 +3,12 @@
 .navigationbar {
     align-items: center;
     background-color: var(--palette4);
-    color: black;
     display: flex;
     flex-direction: row;
     font-family: Arial, Helvetica, sans-serif;
     height: 100px;
     justify-content: space-around;
     position: sticky;
-    top: 0px;
     width: 100%;
     z-index: 100;
 }
@@ -49,14 +47,19 @@
     }
 }
 
-.search__button {
+.navigationbar__search button {
     border-radius: 40px;
     color: var(--palette1);
     height: 100%;
     width: 15%;
 
+}
+
+.search__button i {
+    color: var(--palette2);
+
     &:hover {
-        color: white;
+        color: black;
     }
 }
 
