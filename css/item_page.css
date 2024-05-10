@@ -23,13 +23,13 @@ main {
     }
 }
 
-.item_image {
+.item__image {
     height: 400px;
     width: 300px;
     object-fit: fill;
 }
 
-.item_info {
+.item__info {
     align-items: center;
     background-color: var(--palette0);
     display: flex;
@@ -42,7 +42,7 @@ main {
     }
 }
 
-.general_info {
+.item__text {
     background-color: var(--palette1);
     flex-shrink: 0;
     height: 80%;
@@ -75,7 +75,7 @@ main {
     width: 90%;
 }
 
-.critic_content {
+.critic__content {
     flex-shrink: 0;
     height: 60%;
     width: 90%;
