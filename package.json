@@ -1,0 +1,23 @@
+{
+  "name": "prog",
+  "version": "0.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "@chenfengyuan/vue-carousel": "^2.0.0",
+    "@coreui/coreui": "^5.0.1",
+    "@coreui/vue": "^5.0.0",
+    "vue": "^3.4.27",
+    "vue-router": "^4.3.0"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^5.0.4",
+    "vite": "^5.2.8",
+    "vite-plugin-vue-devtools": "^7.0.25"
+  }
+}
