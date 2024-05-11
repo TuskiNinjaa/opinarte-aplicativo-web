@@ -6,29 +6,51 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../css/main.css">
     <link rel="stylesheet" href="../css/navigationbar.css">
+    <link rel="stylesheet" href="../css/login.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
 
     <title>Login</title>
 </head>
 
 <body>
-    <nav>
+    <nav class="navigationbar">
         <a class="logo">OpinArte</a>
 
-        <search>
+        <search class="navigationbar__search">
             <input type="text" placeholder="Busque no OpinArte">
             <button type="submit" class="search__button">
                 <i class="fa-solid fa-magnifying-glass fa-1x"></i>
             </button>
         </search>
 
-        <menu>
+        <menu class="navigationbar__menu">
             <li><button class="menu__movies" href="">Filmes</button></li>
             <li><button class="menu__series" href="">Séries</button></li>
             <li><button class="menu__books" href="">Livros</button></li>
             <li><button class="menu__login" href="">Login</button></li>
         </menu>
     </nav>
+
+    <main>
+        <div class="login-container">
+            <h1>Login</h1>
+            <form action="#" method="post">
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="senha">Senha:</label><br>
+                <input type="password" id="senha" name="senha" required><br><br>
+
+                <div class="to-center">
+                    <button type="submit" class="login-bt">Entrar</button>
+                </div>
+            </form>
+
+            <div class="to-center">
+                <p class="cadastro">Não tem uma conta? <a href="signup.html" class="cadastro-href">Cadastre-se</a></p>
+            </div>
+        </div>
+    </main>
 
 </body>
 
