@@ -1,95 +1,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Aclonica&display=swap');
 
+:root {
+    --navbar__nav-width: 30rem;
+}
+
 .navbar {
-    background-color: #259172;
+    background-color: var(--opinarte-c-darker-green);
     width: 100vw;
-    display: flex;
-    flex-direction: row;
-    align-items: center;
-    justify-content: center;
     z-index: 5;
 }
 
-.navbar__wrapper {
-    max-width: 1100px;
-    display: flex;
-    flex-direction: row;
-    width: 100%;
-    padding: .4rem .8rem;
-    align-items: center;
-    justify-content: space-between;
+.container {
+    flex-direction: var(--navbar-flex-direction);
 }
 
-.navbar__logo {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
-    background-color: transparent;
-    border: none;
-    color: white;
-    font-family: "Aclonica", Arial, Helvetica, sans-serif;
-    font-size: 2rem;
+.navbar__brand{
+    color: var(--vt-c-text-light-1);
+    font-family: var(--opinarte-font-family-brand);
+    font-size: var(--opinarte-font-size-title);
 }
 
 .navbar__search {
-    background-color: #ffffff;
-    color: black;
-    align-items: center;
-    background-color: white;
-    border-radius: 40px;
-    display: flex;
-    height: 40%;
-    justify-content: right;
-    margin: .5rem;
-    justify-content: space-between;
+    background-color: var(--vt-c-white);
+    width: 15rem;
+    height: 3rem;
 }
 
-.navbar__search--button {
-    color: black;
-    background-color: #ffffff;
-    border: none;
-    margin: .2rem .5rem;
+.navbar__search--input {
+    background-color: var(--vt-c-white);
 }
 
-.navbar__search--button input{
-    border: none;
-    font-family: 'Inter', sans-serif;
+.navbar__nav {
+    width: var(--navbar__nav-width);
 }
 
-.navbar__items {
-    display: flex;
-    justify-content: space-around;
-    list-style: none;
-    width: 30%;
+.navbar__nav .nav-link {
+    color: var(--vt-c-text-light-1);
 }
-
-.navbar__item {
-    font-family: 'Inter', sans-serif;
-    font-size: 1.2rem;
-    color: white;
-    font-weight: bold;
-    text-decoration: none;
-    transition: color 0.3s ease-in-out;
-    background-color: transparent;
-    border: none;
-
-    &:hover {
-        color: black;
-    }
-}
-
-.navbar__user {
-    width: 15%;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-    align-items: center;
+.navbar__nav .nav-link:hover{
+    color: var(--vt-c-black);
 }
 
 .navbar__user--picture {
-    /* position: relative; */
-    width: 30%;
-    border-radius: 50%;
-    display: block;
+    width: 40px;
+}
+
+@media screen and (max-width: 992px) {
+    :root {
+        --navbar__nav-width: 100%;
+    }
 }

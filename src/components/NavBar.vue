@@ -1,36 +1,48 @@
 <template>
-    <nav class="navbar">
-        <div class="navbar__wrapper">
-            <div>
-                <button class="navbar__logo" href="">OpinArte</button>
-            </div>
+    <nav class="navbar navbar-expand-lg justify-content-between align-items-center">
+        <div class="container">
+            <span class="navbar__brand navbar-brand">Opinarte</span>
 
-            <div class="navbar__search" action="">
-                <button type="submit" class="navbar__search--button">
-                    <input type="text" placeholder="Busque no OpinArte" name="search">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="icone navbar__search-icon" viewBox="0 0 16 16">
-                        <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"/>
+            <form class="navbar__search form-inline d-flex rounded-5">
+                <input class="navbar__search--input form-control mr-sm-2 rounded-5 border-0" type="search" placeholder="Busque no OpinArte"
+                    aria-label="Search">
+                <button class="navbar__search--button btn my-2 my-sm-0 rounded-5" type="submit">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                        class="icone navbar__search-icon" viewBox="0 0 16 16">
+                        <path
+                            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
                     </svg>
                 </button>
-            </div>
-            
-            <ul class="navbar__items">
-                
-                <li><a href="" class="navbar__item">Filmes</a></li>
-                <li><a href="" class="navbar__item">Séries</a></li>
-                <li><a href="" class="navbar__item">Livros</a></li>
-            </ul>
+            </form>
 
-            <div class="navbar__user">
-                <img src="../assets/images/perfil_exemplo.jpg" alt="" class="navbar__user--picture">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+
+            <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar__nav navbar-nav justify-content-around">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Filmes</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Séries</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Livros</a>
+                    </li>
+                    <li class="navbar__user nav-item">
+                        <img src="../assets/images/perfil_exemplo.jpg" alt="" class="navbar__user--picture  rounded-5">
+                    </li>
+                </ul>
             </div>
 
         </div>
     </nav>
+
 </template>
 
 <script>
 import { RouterLink } from 'vue-router'
 import '../assets/styles/navbar.css'
-
 </script>

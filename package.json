@@ -12,7 +12,12 @@
     "@chenfengyuan/vue-carousel": "^2.0.0",
     "@coreui/coreui": "^5.0.1",
     "@coreui/vue": "^5.0.0",
+    "@popperjs/core": "^2.11.8",
+    "bootstrap": "^5.3.3",
+    "bootstrap-vue": "^2.23.1",
+    "popper.js": "^1.16.1",
     "vue": "^3.4.27",
+    "vue-popperjs": "^2.3.0",
     "vue-router": "^4.3.0"
   },
   "devDependencies": {

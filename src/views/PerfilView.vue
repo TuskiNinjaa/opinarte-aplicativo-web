@@ -3,5 +3,9 @@ import NavBar from '../components/NavBar.vue'
 </script>
 
 <template>
-    Perfil
+    <section class="d-flex flex-column">
+
+		<NavBar></NavBar>
+
+    </section>
 </template>
