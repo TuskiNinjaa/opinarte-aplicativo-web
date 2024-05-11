@@ -1,7 +1,7 @@
 <template>
-    <nav class="navbar navbar-expand-lg sticky-top justify-content-between align-items-center">
+    <nav class="navbar navbar-expand-lg justify-content-between align-items-center">
         <div class="container">
-            <span class="navbar__brand navbar-brand">Opinarte</span>
+            <a class="navbar__brand navbar-brand" href="./">Opinarte</a>
 
             <form class="navbar__search form-inline d-flex rounded-5 justify-content-around align-items-center">
                 <input class="navbar__search--input form-control mr-sm-2 rounded-5 border-0" type="search" placeholder="Busque no OpinArte"
@@ -32,7 +32,9 @@
                         <a class="nav-link" href="#">Livros</a>
                     </li>
                     <li class="navbar__user nav-item">
-                        <img src="../assets/images/perfil_exemplo.jpg" alt="" class="navbar__user--picture  rounded-5">
+                        <a class="nav-link" href="./perfil">
+                            <img src="../assets/images/perfil_exemplo.jpg" alt="" class="navbar__user--picture rounded-5">
+                        </a>
                     </li>
                 </ul>
             </div>

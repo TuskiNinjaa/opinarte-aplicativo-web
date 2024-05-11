@@ -1,13 +1,61 @@
-section {
-    background-color: pink;
-    height: 200vh;
+@import './base.css';
+:root {
+    --frame-flex-direction: row;
+    --frame__profile-width: 40%;
 }
+
+section {
+    color: var(--vt-c-black);
+    font-size: var(--opinarte-font-size-small);
+}
+
+.frame {
+    flex-direction: var(--frame-flex-direction);
+}
+
+.frame__profile {
+    width: var(--frame__profile-width);
+}
+
 .profile {
-    background-color: red;
+    background-color: var(--opinarte-c-lighter-green);
+}
+
+.profile__image {
+    width: 120px;
+    height: 140px;
+    object-fit: cover;
+}
+
+.profile__form {
+    background-color: var(--opinarte-c-green);
+}
+
+.profile__button .btn {
+    background-color: var(--opinarte-c-green);
+    color: var(--vt-c-black);
+    font-size: var(--opinarte-font-size-small);
+
+    &:hover {
+        background-color: var(--vt-c-white);
+    }
+}
+.profile__title,
+.addartwork__title {
+    font-size: var(--opinarte-font-size-medium);
 }
 .addartwork {
-    background-color: blue;
+    background-color: var(--opinarte-c-lighter-green);
 }
-.critic {
+
+.frame__critic {
     background-color: green;
+    width: 50%;
+}
+
+@media screen and (orientation: portrait) {
+    :root {
+        --frame-flex-direction: column;
+        --frame__profile-width: 100%;
+    }
 }

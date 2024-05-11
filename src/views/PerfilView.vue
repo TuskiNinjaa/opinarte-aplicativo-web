@@ -7,54 +7,97 @@ import '../assets/styles/perfil.css'
     <section class="d-flex flex-column align-items-center">
         <NavBar></NavBar>
 
-        <div class="container-fluid d-flex justify-content-between">
+        <div class="frame container-fluid d-flex align-items-center justify-content-around">
 
-            <div class="container-fluid d-flex flex-column">
+            <div class="frame__profile d-flex flex-column">
 
-                <div class="profile d-flex flex-column">
-                    <img class="profile__image" src="../img/galo.jpg" alt="Imagem do perfil">
+                <div class="profile d-flex flex-column m-3">
+                    <p class="profile__title m-2">Dados do usuário:</p>
+                    <img class="profile__image align-self-center m-2" src="../assets/images/perfil_exemplo.jpg"
+                        alt="Imagem do perfil">
 
-                    <div class="profile__info">
-                        <h1>Dados do usuário:</h1>
-                        <form action="" method="get" class="form">
-                            <label for="">Nome: <input type="text" name="" id="" placeholder="SeuNome" disabled></label>
-                            <label for="">Email: <input type="text" name="" id="" placeholder="SeuEmail"
-                                    disabled></label>
-                            <label for="">Data de aniverário: <input type="date" name="" id="" disabled></label>
-                        </form>
-                        <div class="profile__button">
-                            <button>Trocar senha</button><button>Atualizar dados</button>
+                    <form class="profile__form m-2">
+                        <div class="form-group row m-2">
+                            <label for="userInputName" class="col-sm-2 col-form-label">Nome</label>
+                            <div class="col-sm-10">
+                                <input type="text" readonly class="form-control-plaintext" id="userInputName"
+                                    value="SeuNome">
+                            </div>
                         </div>
+                        <div class="form-group row m-2">
+                            <label for="userInputEmail" class="col-sm-2 col-form-label">Email</label>
+                            <div class="col-sm-10">
+                                <input type="text" readonly class="form-control-plaintext" id="userInputEmail"
+                                    value="email@example.com">
+                            </div>
+                        </div>
+                        <div class="form-group row m-2">
+                            <label for="userInputPassword" class="col-sm-2 col-form-label">Senha</label>
+                            <div class="col-sm-10">
+                                <input type="password" class="form-control-plaintext" id="userInputPassword"
+                                    placeholder="*****">
+                            </div>
+                        </div>
+                        <div class="form-group row m-2">
+                            <label for="userInputPassword" class="col-sm-2 col-form-label">Data de aniversário</label>
+                            <div class="col-sm-10">
+                                <input type="date" class="form-control-plaintext" id="userInputPassword" placeholder="">
+                            </div>
+                        </div>
+                    </form>
 
+                    <div class="profile__button m-2">
+                        <div class="btn-group d-flex align-items-center justify-content-around" role="group"
+                            aria-label="Basic example">
+                            <button type="button" class="btn btn-secondary m-1 rounded-5 border-0">Trocar senha</button>
+                            <button type="button" class="btn btn-secondary m-1 rounded-5 border-0">Atualizar
+                                dados</button>
+                        </div>
                     </div>
                 </div>
 
-                <div class="addartwork">
-                    <h1>Adicione uma obra:</h1>
-                    <div class="addartwork__middle">
-                        <input class="addartwork__image" type="image" src="../img/coraline.jpg" alt="">
-
-                        <form class=" addartwork__form" action="">
-                            <label for="">Nome do file:</label>
-                            <input type="text" name="" id="" placeholder="NomeFilme">
-                            <label for="">Ano:</label>
-                            <input type="text" name="" id="" placeholder="AnoFilme" disabled>
-                            <label for="">Autores:</label>
-                            <input type="text" name="" id="" placeholder="AutoresFilme" disabled>
-                            <label for="">Resenha do filme:</label>
-                            <input type="text" name="" id="" placeholder="ResenhaFilme" disabled>
-                            <label for="">Editora:</label>
-                            <input type="text" name="" id="" placeholder="EditoraFilme" disabled>
-                        </form>
-                    </div>
-                    <div class="addartwork__button">
-                        <button>Trocar senha</button>
-                    </div>
+                <div class="addartwork m-3">
+                    <p class="addartwork__title m-2">Adicione uma Obra:</p>
+                    <form class="profile__form m-2">
+                        <div class="form-group row m-2">
+                            <label for="artInputName" class="col-sm-2 col-form-label">Nome da obra</label>
+                            <div class="col-sm-10">
+                                <input type="text" readonly class="form-control-plaintext" id="artInputName"
+                                    value="NomeDaObra">
+                            </div>
+                        </div>
+                        <div class="form-group row m-2">
+                            <label for="inputDate" class="col-sm-2 col-form-label">Data de lançamento</label>
+                            <div class="col-sm-10">
+                                <input type="date" class="form-control-plaintext" id="artInputDate" placeholder="">
+                            </div>
+                        </div>
+                        <div class="form-group row m-2">
+                            <label for="artInputAuthor" class="col-sm-2 col-form-label">Autor</label>
+                            <div class="col-sm-10">
+                                <input type="text" readonly class="form-control-plaintext" id="artInputAuthor"
+                                    value="NomeAutor">
+                            </div>
+                        </div>
+                        <div class="form-group row m-2">
+                            <label for="artInputPublisher" class="col-sm-2 col-form-label">Editora</label>
+                            <div class="col-sm-10">
+                                <input type="text" readonly class="form-control-plaintext" id="artInputPublisher"
+                                    value="NomeEditora">
+                            </div>
+                        </div>
+                        <div class="form-group row m-2">
+                            <label for="artInputImage" class="col-sm-2 col-form-label">Imagem da Obra</label>
+                            <div class="col-sm-10">
+                                <input type="file" class="form-control-file" id="artInputImage">
+                            </div>
+                        </div>
+                    </form>
                 </div>
             </div>
 
 
-            <div class="critic">
+            <div class="frame__critic">
                 <div class="critic__post">sample</div>
                 <div class="critic__post">sample</div>
                 <div class="critic__post">sample</div>
