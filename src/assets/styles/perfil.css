@@ -1,0 +1,13 @@
+section {
+    background-color: pink;
+    height: 200vh;
+}
+.profile {
+    background-color: red;
+}
+.addartwork {
+    background-color: blue;
+}
+.critic {
+    background-color: green;
+}

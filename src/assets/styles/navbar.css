@@ -12,9 +12,10 @@
 
 .container {
     flex-direction: var(--navbar-flex-direction);
+    font-size: var(--opinarte-font-size-medium);
 }
 
-.navbar__brand{
+.navbar__brand {
     color: var(--vt-c-text-light-1);
     font-family: var(--opinarte-font-family-brand);
     font-size: var(--opinarte-font-size-title);
@@ -30,15 +31,26 @@
     background-color: var(--vt-c-white);
 }
 
+.navbar__search--button {
+    height: 100%;
+}
+
+.navbar__search--icon {
+    width: 20px;
+}
+
 .navbar__nav {
     width: var(--navbar__nav-width);
 }
 
 .navbar__nav .nav-link {
     color: var(--vt-c-text-light-1);
+    transition: 0.4s ease-in-out;
 }
-.navbar__nav .nav-link:hover{
+
+.navbar__nav .nav-link:hover {
     color: var(--vt-c-black);
+    background-color: var(--opinarte-c-green);
 }
 
 .navbar__user--picture {

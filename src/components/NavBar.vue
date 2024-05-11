@@ -1,14 +1,14 @@
 <template>
-    <nav class="navbar navbar-expand-lg justify-content-between align-items-center">
+    <nav class="navbar navbar-expand-lg sticky-top justify-content-between align-items-center">
         <div class="container">
             <span class="navbar__brand navbar-brand">Opinarte</span>
 
-            <form class="navbar__search form-inline d-flex rounded-5">
+            <form class="navbar__search form-inline d-flex rounded-5 justify-content-around align-items-center">
                 <input class="navbar__search--input form-control mr-sm-2 rounded-5 border-0" type="search" placeholder="Busque no OpinArte"
                     aria-label="Search">
                 <button class="navbar__search--button btn my-2 my-sm-0 rounded-5" type="submit">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
-                        class="icone navbar__search-icon" viewBox="0 0 16 16">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="currentColor"
+                        class="icone navbar__search--icon" viewBox="0 0 16 16">
                         <path
                             d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0" />
                     </svg>
@@ -21,7 +21,7 @@
             </button>
 
             <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar__nav navbar-nav justify-content-around">
+                <ul class="navbar__nav navbar-nav justify-content-between">
                     <li class="nav-item active">
                         <a class="nav-link" href="#">Filmes</a>
                     </li>
