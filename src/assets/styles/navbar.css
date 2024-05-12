@@ -16,8 +16,8 @@
     font-size: var(--opinarte-font-size-medium);
 }
 
-.navbar__brand {
-    color: var(--vt-c-text-light-1);
+.container .navbar__brand {
+    color: var(--opinarte-text-white);
     font-family: var(--opinarte-font-family-brand);
     font-size: var(--opinarte-font-size-title);
 }
@@ -37,7 +37,11 @@
 }
 
 .navbar__search--icon {
-    width: 20px;
+    width: 30px;
+
+    &:hover {
+        color: var(--opinarte-text-black);
+    }
 }
 
 .navbar__nav {
@@ -45,16 +49,20 @@
 }
 
 .navbar__nav .nav-link {
-    color: var(--vt-c-text-light-1);
+    color: var(--opinarte-text-white);
     transition: 0.4s ease-in-out;
 }
 
 .navbar__nav .nav-link:hover {
-    color: var(--vt-c-black);
+    color: var(--opinarte-text-black);
 }
 
 .navbar__user--picture {
     width: 40px;
+}
+
+.navbar__search--button:hover {
+    color: var(--opinarte-text-black);
 }
 
 @media screen and (max-width: 992px) {

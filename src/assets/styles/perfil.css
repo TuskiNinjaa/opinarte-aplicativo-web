@@ -1,7 +1,11 @@
 @import './base.css';
+
 :root {
     --frame-flex-direction: row;
-    --frame__profile-width: 40%;
+    --frame__critic-align-self: flex-start;
+    --frame__critic-width: 60vw;
+    --frame__profile-align-self: flex-start;
+    --frame__profile-width: 40vw;
 }
 
 section {
@@ -14,6 +18,7 @@ section {
 }
 
 .frame__profile {
+    align-self: var(--frame__profile-align-self);
     width: var(--frame__profile-width);
 }
 
@@ -22,9 +27,9 @@ section {
 }
 
 .profile__image {
-    width: 120px;
     height: 140px;
     object-fit: cover;
+    width: 120px;
 }
 
 .profile__form {
@@ -40,22 +45,63 @@ section {
         background-color: var(--vt-c-white);
     }
 }
+
 .profile__title,
 .addartwork__title {
     font-size: var(--opinarte-font-size-medium);
 }
+
 .addartwork {
     background-color: var(--opinarte-c-lighter-green);
 }
 
 .frame__critic {
-    background-color: green;
-    width: 50%;
+    align-self: var(--frame__critic-align-self);
+    background-color: var(--opinarte-c-lighter-green);
+    width: var(--frame__critic-width);
+}
+
+.post {
+    background-color: var(--opinarte-c-green);
+}
+
+.post .btn-group .btn {
+    background-color: var(--opinarte-c-lighter-green);
+    color: var(--opinarte-text-black);
+
+    &:hover {
+        background-color: var(--vt-c-white);
+    }
+}
+
+.post .blockquote {
+    flex-direction: var(--frame-flex-direction);
+}
+
+.post__image {
+    height: 200px;
+    object-fit: cover;
+    width: 150px;
+}
+
+.post__title {
+    font-size: var(--opinarte-font-size-big);
+}
+
+.post__filmname {
+    font-size: var(--opinarte-font-size-medium);
+}
+
+.post .post__icon {
+    width: 50px;
 }
 
 @media screen and (orientation: portrait) {
     :root {
         --frame-flex-direction: column;
-        --frame__profile-width: 100%;
+        --frame__critic-align-self: center;
+        --frame__critic-width: 90vw;
+        --frame__profile-align-self: center;
+        --frame__profile-width: 90vw;
     }
 }

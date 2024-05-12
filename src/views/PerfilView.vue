@@ -7,7 +7,7 @@ import '../assets/styles/perfil.css'
     <section class="d-flex flex-column align-items-center">
         <NavBar></NavBar>
 
-        <div class="frame container-fluid d-flex align-items-center justify-content-around">
+        <div class="frame container-fluid d-flex justify-content-around">
 
             <div class="frame__profile d-flex flex-column">
 
@@ -96,31 +96,182 @@ import '../assets/styles/perfil.css'
                 </div>
             </div>
 
+            <div class="frame__critic m-3">
 
-            <div class="frame__critic">
-                <div class="critic__post">sample</div>
-                <div class="critic__post">sample</div>
-                <div class="critic__post">sample</div>
-                <div class="critic__post">sample</div>
-                <div class="critic__post">sample</div>
-                <div class="critic__post">sample</div>
-                <div class="critic__post">sample</div>
-                <div class="critic__post">sample</div>
+                <div class="post card m-3">
+                    <div class="card-header">
+                        <p class="post__title">Título da crítica</p>
+                        <p class="post__filmname">NomeDoFilme</p>
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0 d-flex">
+                            <img class="post__image m-2 align-self-center" src="../assets/images/coraline.jpg"
+                                alt="Imagem do filme">
+
+                            <div class="post__data d-flex flex-column justify-content-between m-2">
+                                <p class="m-2">
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                </p>
+
+                                <div class="btn-group m-2" role="group"
+                                    aria-label="Basic example">
+                                    <button type="button" class="btn btn-secondary m-1 rounded-5 border-0">
+                                        <font-awesome-icon :icon="['fas', 'thumbs-up']" />
+                                    </button>
+                                    <button type="button" class="btn btn-secondary m-1 rounded-5 border-0">
+                                        <font-awesome-icon :icon="['fas', 'thumbs-down']" />
+                                    </button>
+                                    <button type="button" class="btn btn-secondary m-1 rounded-5 border-0">
+                                        <font-awesome-icon :icon="['fas', 'comment']" />
+                                    </button>
+                                    <button type="button" class="btn btn-secondary m-1 rounded-5 border-0">
+                                        <font-awesome-icon :icon="['fas', 'pen']" />
+                                    </button>
+                                    <button type="button" class="btn btn-secondary m-1 rounded-5 border-0">
+                                        <font-awesome-icon :icon="['fas', 'up-right-from-square']" />
+                                    </button>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <div class="post card m-3">
+                    <div class="card-header">
+                        <p class="post__title">Título da crítica</p>
+                        <p class="post__filmname">NomeDoFilme</p>
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0 d-flex">
+                            <img class="post__image m-2 align-self-center" src="../assets/images/coraline.jpg"
+                                alt="Imagem do filme">
+
+                            <div class="post__data d-flex flex-column justify-content-between m-2">
+                                <p class="m-2">
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                </p>
+
+                                <div class="btn-group m-2" role="group"
+                                    aria-label="Basic example">
+                                    <button type="button" class="btn btn-secondary m-1 rounded-5 border-0">
+                                        <font-awesome-icon :icon="['fas', 'thumbs-up']" />
+                                    </button>
+                                    <button type="button" class="btn btn-secondary m-1 rounded-5 border-0">
+                                        <font-awesome-icon :icon="['fas', 'thumbs-down']" />
+                                    </button>
+                                    <button type="button" class="btn btn-secondary m-1 rounded-5 border-0">
+                                        <font-awesome-icon :icon="['fas', 'comment']" />
+                                    </button>
+                                    <button type="button" class="btn btn-secondary m-1 rounded-5 border-0">
+                                        <font-awesome-icon :icon="['fas', 'pen']" />
+                                    </button>
+                                    <button type="button" class="btn btn-secondary m-1 rounded-5 border-0">
+                                        <font-awesome-icon :icon="['fas', 'up-right-from-square']" />
+                                    </button>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <div class="post card m-3">
+                    <div class="card-header">
+                        <p class="post__title">Título da crítica</p>
+                        <p class="post__filmname">NomeDoFilme</p>
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0 d-flex">
+                            <img class="post__image m-2 align-self-center" src="../assets/images/coraline.jpg"
+                                alt="Imagem do filme">
+
+                            <div class="post__data d-flex flex-column justify-content-between m-2">
+                                <p class="m-2">
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                </p>
+
+                                <div class="btn-group m-2" role="group"
+                                    aria-label="Basic example">
+                                    <button type="button" class="btn btn-secondary m-1 rounded-5 border-0">
+                                        <font-awesome-icon :icon="['fas', 'thumbs-up']" />
+                                    </button>
+                                    <button type="button" class="btn btn-secondary m-1 rounded-5 border-0">
+                                        <font-awesome-icon :icon="['fas', 'thumbs-down']" />
+                                    </button>
+                                    <button type="button" class="btn btn-secondary m-1 rounded-5 border-0">
+                                        <font-awesome-icon :icon="['fas', 'comment']" />
+                                    </button>
+                                    <button type="button" class="btn btn-secondary m-1 rounded-5 border-0">
+                                        <font-awesome-icon :icon="['fas', 'pen']" />
+                                    </button>
+                                    <button type="button" class="btn btn-secondary m-1 rounded-5 border-0">
+                                        <font-awesome-icon :icon="['fas', 'up-right-from-square']" />
+                                    </button>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
             </div>
         </div>
-        <!--
-
-        <section class="critic">
-            <div class="critic__post">sample</div>
-            <div class="critic__post">sample</div>
-            <div class="critic__post">sample</div>
-            <div class="critic__post">sample</div>
-            <div class="critic__post">sample</div>
-            <div class="critic__post">sample</div>
-            <div class="critic__post">sample</div>
-            <div class="critic__post">sample</div>
-            <i class="fa-solid fa-magn
-    </section>ifying-glass fa-1x"></i>
- -->
     </section>
 </template>
