@@ -16,7 +16,7 @@ See [Vite Configuration Reference](https://vitejs.dev/config/).
 npm install
 ```
 
-Adding Font Awesome Icons
+Adding Font Awesome Icons and Bootstrap
 
 ```sh
 npm i --save @fortawesome/fontawesome-svg-core

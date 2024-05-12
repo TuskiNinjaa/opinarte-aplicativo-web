@@ -1,0 +1,40 @@
+@import './base.css';
+
+:root {
+    --login__submit-width: 50%;
+}
+
+.login {
+    background-color: var(--opinarte-c-lighter-green);
+    width: 90%;
+    height: 40rem;
+}
+
+.login__title {
+    font-size: var(--opinarte-font-size-title);
+}
+
+.login__submit {
+    width: var(--login__submit-width);
+}
+
+.login__submit .btn {
+    background-color: var(--opinarte-c-green);
+    color: var(--opinarte-text-black);
+
+    &:hover {
+        background-color: var(--vt-c-white);
+    }
+}
+
+.login__wraper {
+    width: 90%;
+}
+
+@media screen and (orientation:portrait){
+    :root {
+        --login__submit-width: 90%;
+
+    }
+    
+}
