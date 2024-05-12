@@ -36,6 +36,7 @@ section {
     background-color: var(--opinarte-c-green);
 }
 
+.addartwork .btn,
 .profile__button .btn {
     background-color: var(--opinarte-c-green);
     color: var(--vt-c-black);

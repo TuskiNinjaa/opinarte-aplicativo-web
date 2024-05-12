@@ -1,0 +1,62 @@
+@import './base.css';
+
+:root {
+    --busca-result-flex-direction: row;
+    --busca-result-width: 30rem;
+}
+
+.jumbotron {
+    background-color: var(--opinarte-c-darker-green);
+}
+
+.frame {
+    background-color: var(--opinarte-c-lighter-green);
+    width: 100%;
+}
+
+.dropdown .btn {
+    background-color: var(--opinarte-c-darker-green);
+    color: var(--opinarte-text-black);
+    &:active {
+        background-color: var(--vt-c-white);
+        color: var(--opinarte-text-black);
+    }
+}
+
+.dropdown-item:active {
+    background-color: var(--vt-c-white);
+    box-shadow: none;
+    outline: none !important;
+}
+
+.dropdown-item .btn {
+    color: var(--opinarte-text-black);
+
+    &:active {
+        background-color: var(--vt-c-white);
+        color: var(--opinarte-text-black);
+    }
+}
+
+.result {
+    background-color: var(--opinarte-c-green);
+    width: var(--busca-result-width);
+}
+
+.result .card-body {
+    flex-direction: var(--busca-result-flex-direction);
+}
+
+.result__image {
+    width: 200px;
+}
+
+.result__data .list-group li {
+    background-color: var(--opinarte-c-light-green);
+}
+
+@media screen and (orientation: portrait) {
+    :root {
+        --busca-result-flex-direction: column;
+    }
+}
