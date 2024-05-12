@@ -39,9 +39,9 @@ import '../assets/styles/perfil.css'
                             </div>
                         </div>
                         <div class="form-group row m-2">
-                            <label for="userInputPassword" class="col-sm-2 col-form-label">Data de aniversário</label>
+                            <label for="userInputDate" class="col-sm-2 col-form-label">Data de aniversário</label>
                             <div class="col-sm-10">
-                                <input type="date" class="form-control-plaintext" id="userInputPassword" placeholder="">
+                                <input type="date" class="form-control-plaintext" id="userInputDate" placeholder="">
                             </div>
                         </div>
                     </form>

@@ -1,39 +1,47 @@
 @import './base.css';
 
 :root {
-    --login__submit-width: 50%;
+    --window__submit-width: 50%;
 }
 
-.login {
+.window__login {
     background-color: var(--opinarte-c-lighter-green);
     width: 90%;
     height: 40rem;
 }
 
-.login__title {
+.window__cadastro {
+    background-color: var(--opinarte-c-lighter-green);
+    width: 90%;
+    height: 50rem;
+}
+
+.window__title {
     font-size: var(--opinarte-font-size-title);
 }
 
-.login__submit {
-    width: var(--login__submit-width);
+.window__submit {
+    width: var(--window__submit-width);
 }
 
-.login__submit .btn {
+.window__submit .btn {
     background-color: var(--opinarte-c-green);
     color: var(--opinarte-text-black);
+    font-size: var(--opinarte-font-size-big);
 
     &:hover {
         background-color: var(--vt-c-white);
     }
 }
 
-.login__wraper {
+.window__wraper {
     width: 90%;
+    height: 90%;
 }
 
 @media screen and (orientation:portrait){
     :root {
-        --login__submit-width: 90%;
+        --window__submit-width: 90%;
 
     }
     
