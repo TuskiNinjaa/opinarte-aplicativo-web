@@ -1,6 +1,6 @@
 <script setup>
 import NavBar from '../components/NavBar.vue'
-import '../assets/styles/login_cadastro.css'
+import '../assets/styles/login-cadastro.css'
 </script>
 
 <template>
@@ -13,7 +13,7 @@ import '../assets/styles/login_cadastro.css'
 
                 <div class="form-group m-2">
                     <label for="inputName">Nome</label>
-                    <input type="password" class="form-control" id="inputName" placeholder="Seu nome aqui" required>
+                    <input type="text" class="form-control" id="inputName" placeholder="Seu nome aqui" required>
                 </div>
 
                 <div class="form-group m-2">

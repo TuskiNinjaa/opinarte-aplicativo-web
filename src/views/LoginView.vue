@@ -1,6 +1,6 @@
 <script setup>
 import NavBar from '../components/NavBar.vue'
-import '../assets/styles/login_cadastro.css'
+import '../assets/styles/login-cadastro.css'
 </script>
 
 <template>

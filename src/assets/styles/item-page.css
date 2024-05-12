@@ -2,52 +2,41 @@
 
 :root {
     --frame-flex-direction: row;
-    --frame__critic-align-self: flex-start;
-    --frame__critic-width: 70%;
-    --frame__itempage-align-self: flex-start;
-    --frame__itempage-width: 80%;
+    --frame__critic-width: 60%;
+    --frame__itempage-width: 40%;
 }
 
 section {
     background-color: var(--vt-c-white);
     font-size: var(--opinarte-font-size-small);
-    position: absolute;
-}
-
-.frame {
-    flex-direction: var(--frame-flex-direction);
 }
 
 .itempage {
-    background-color: var(--opinarte-c-lighter-green);
+    background-color: transparent;
 }
 
-.frame__itempage {
+.frame .frame__itempage {
     align-self: var(--frame__itempage-align-self);
     width: var(--frame__itempage-width);
-    background-color: var(--opinarte-c-lighter-green);
-    gap: 70px;
-    margin: 40px 100px 40px 100px;
-}
-
-.itempage .blockquote {
-    flex-direction: var(--frame-flex-direction);
+    background-color: var(--opinarte-c-light-green);
 }
 
 .itempage__image {
-    height: 400px;
-    object-fit: fill;
-    width: 300px;
+    object-fit:cover;
+    width: 200px;
+}
+
+.itempage_title {
+    font-size: var(--opinarte-font-size-big);
 }
 
 .frame__critic {
     background-color: var(--opinarte-c-lighter-green);
+    width: var(--frame__critic-width);
 }
-
 
 .post {
     background-color: var(--opinarte-c-green);
-    margin: 20px 30px 40px 30px;
 }
 
 .post .btn-group .btn {
@@ -64,8 +53,7 @@ section {
 }
 
 .post__image {
-    height: 200px;
-    object-fit: fill;
+    object-fit: cover;
     width: 150px;
 }
 
@@ -83,8 +71,8 @@ section {
 
 @media screen and (orientation: portrait) {
     :root {
-        --frame-flex-direction: column;
-        --frame_itempage-align-self: center;
         --frame__itempage-width: 90%;
+        --frame__critic-width: 90%;
+        --frame-flex-direction: column;
     }
 }
