@@ -55,6 +55,25 @@ section {
     background-color: var(--opinarte-c-lighter-green);
 }
 
+.addartwork__form {
+    background-color: var(--opinarte-c-green);
+}
+
+.addartwork__form input,
+.addartwork__form select{
+    background-color: var(--opinarte-c-lighter-green);
+
+}
+
+.form__button .btn {
+    background-color: var(--opinarte-c-green);
+    color: var(--opinarte-text-black);
+
+    &:hover {
+        background-color: var(--vt-c-white);
+    }
+}
+
 .frame__critic {
     align-self: var(--frame__critic-align-self);
     background-color: var(--opinarte-c-lighter-green);
