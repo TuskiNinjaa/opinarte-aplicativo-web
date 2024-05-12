@@ -19,6 +19,7 @@ npm install
 Adding Font Awesome Icons and Bootstrap
 
 ```sh
+npm install bootstrap
 npm i --save @fortawesome/fontawesome-svg-core
 npm i --save @fortawesome/free-solid-svg-icons
 npm i --save @fortawesome/vue-fontawesome
