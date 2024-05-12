@@ -44,7 +44,6 @@ import NavBar from '../components/NavBar.vue'
                 <div class="post card">
                     <div class="card-header">
                         <h3 class="post__title text-center">Título da crítica</h3>
-                        <p class="post__filmname text-center">NomeDaObra</p>
                     </div>
                     <div class="card-body">
                         <blockquote class="blockquote mb-0 d-flex">
@@ -84,50 +83,6 @@ import NavBar from '../components/NavBar.vue'
                 <div class="post card">
                     <div class="card-header">
                         <h3 class="post__title text-center">Título da crítica</h3>
-                        <p class="post__filmname text-center">NomeDaObra</p>
-                    </div>
-                    <div class="card-body">
-                        <blockquote class="blockquote mb-0 d-flex">
-                            <img class="post__image m-1 align-self-center" src="../assets/images/coraline.jpg"
-                                alt="Imagem do filme">
-
-                            <div class="post__data d-flex flex-column justify-content-between m-1">
-                                <p class="m-1">
-                                    conteúdo - conteúdo - conteúdo - conteúdo
-                                    conteúdo - conteúdo - conteúdo - conteúdo
-                                    conteúdo - conteúdo - conteúdo - conteúdo
-                                    conteúdo - conteúdo - conteúdo - conteúdo
-                                    conteúdo - conteúdo - conteúdo - conteúdo
-                                    conteúdo - conteúdo - conteúdo - conteúdo
-                                </p>
-
-                                <div class="btn-group m-1" role="group"
-                                    aria-label="Basic example">
-                                    <button type="button" class="btn btn-secondary m-1 rounded-5 border-0">
-                                        <font-awesome-icon :icon="['fas', 'thumbs-up']" />
-                                    </button>
-                                    <button type="button" class="btn btn-secondary m-1 rounded-5 border-0">
-                                        <font-awesome-icon :icon="['fas', 'thumbs-down']" />
-                                    </button>
-                                    <button type="button" class="btn btn-secondary m-1 rounded-5 border-0">
-                                        <font-awesome-icon :icon="['fas', 'comment']" />
-                                    </button>
-                                    <button type="button" class="btn btn-secondary m-1 rounded-5 border-0">
-                                        <font-awesome-icon :icon="['fas', 'pen']" />
-                                    </button>
-                                    <button type="button" class="btn btn-secondary m-1 rounded-5 border-0">
-                                        <font-awesome-icon :icon="['fas', 'up-right-from-square']" />
-                                    </button>
-                                </div>
-                            </div>
-                        </blockquote>
-                    </div>
-                </div>
-
-                <div class="post card">
-                    <div class="card-header">
-                        <h3 class="post__title text-center">Título da crítica</h3>
-                        <p class="post__filmname text-center">NomeDaObra</p>
                     </div>
                     <div class="card-body">
                         <blockquote class="blockquote mb-0 d-flex">
@@ -167,7 +122,45 @@ import NavBar from '../components/NavBar.vue'
                 <div class="post card">
                     <div class="card-header">
                         <h3 class="post__title text-center">Título da crítica</h3>
-                        <p class="post__filmname text-center">NomeDaObra</p>
+                    </div>
+                    <div class="card-body">
+                        <blockquote class="blockquote mb-0 d-flex">
+                            <img class="post__image m-1 align-self-center" src="../assets/images/coraline.jpg"
+                                alt="Imagem do filme">
+
+                            <div class="post__data d-flex flex-column justify-content-between m-1">
+                                <p class="m-1">
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                    conteúdo - conteúdo - conteúdo - conteúdo
+                                </p>
+
+                                <div class="btn-group m-1" role="group"
+                                    aria-label="Basic example">
+                                    <button type="button" class="btn btn-secondary m-1 rounded-5 border-0">
+                                        <font-awesome-icon :icon="['fas', 'thumbs-up']" />
+                                    </button>
+                                    <button type="button" class="btn btn-secondary m-1 rounded-5 border-0">
+                                        <font-awesome-icon :icon="['fas', 'thumbs-down']" />
+                                    </button>
+                                    <button type="button" class="btn btn-secondary m-1 rounded-5 border-0">
+                                        <font-awesome-icon :icon="['fas', 'comment']" />
+                                    </button>
+                                    <button type="button" class="btn btn-secondary m-1 rounded-5 border-0">
+                                        <font-awesome-icon :icon="['fas', 'pen']" />
+                                    </button>
+                                    <button type="button" class="btn btn-secondary m-1 rounded-5 border-0">
+                                        <font-awesome-icon :icon="['fas', 'up-right-from-square']" />
+                                    </button>
+                                </div>
+                            </div>
+                        </blockquote>
+                    </div>
+                </div>
+
+                <div class="post card">
+                    <div class="card-header">
+                        <h3 class="post__title text-center">Título da crítica</h3>
                     </div>
                     <div class="card-body">
                         <blockquote class="blockquote mb-0 d-flex">
