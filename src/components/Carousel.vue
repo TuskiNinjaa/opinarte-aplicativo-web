@@ -1,92 +1,63 @@
 <template>
-  <div id="carousel" class="carousel slide">
-    <div class="carousel-inner">
-		<div class="carousel-item active">
-			<div class="carousel__wrapper">
-				<div class="col-md-6">
-					<img src="../assets/images/coraline.jpg" class="carousel__img" alt="...">
-				</div>
-				<div class="col-md-6">
-					<div class="carousel-caption d-none d-md-block">
-						<div class="carousel__titulo">First slide label</div>
-						<div class="carousel__sinopse">Some representative placeholder content for the first slide.</div>	
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="carousel-item">
-			<div class="carousel__wrapper">
-				<div class="col-md-6">
-					<img src="../assets/images/coraline.jpg" class="carousel__img" alt="...">
-				</div>
-				<div class="col-md-6">
-					<div class="carousel-caption d-none d-md-block">
-						<div class="carousel__titulo">Second slide label</div>
-						<div class="carousel__sinopse">Some representative placeholder content for the second slide.</div>
-					</div>
-				</div>
-			</div>
-		</div>
-		<div class="carousel-item">
-			<div class="carousel__wrapper">
-				<div class="col-md-6">
-					<img src="../assets/images/coraline.jpg" class="carousel__img" alt="...">
-				</div>
-				<div class="col-md-6">
-					<div class="carousel-caption d-none d-md-block">
-						<div class="carousel__titulo">Third slide label</div>
-						<div class="carousel__sinopse">Some representative placeholder content for the third slide.</div>
-					</div>
-				</div>
-			</div>
-		</div>
+    <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <div class="d-block d-flex justify-content-center">
+                    <div class="block__wrapper d-flex justify-content-around align-items-center">
+                        <img src="../assets/images/coraline.jpg" class="carousel__img" alt="...">
+                        <div class="block__data d-flex flex-column justify-content-center align-items-center">
+                            <div class="carousel__titulo">Titulo 1</div>
+                            <div class="carousel__sinopse">sinopse - sinopse - sinopse - sinopse - sinopse - sinopse</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <div class="d-block d-flex justify-content-center">
+                    <div class="block__wrapper d-flex justify-content-around align-items-center">
+                        <img src="../assets/images/coraline.jpg" class="carousel__img" alt="...">
+                        <div class="block__data d-flex flex-column justify-content-center align-items-center">
+                            <div class="carousel__titulo">Titulo 2</div>
+                            <div class="carousel__sinopse">sinopse - sinopse - sinopse - sinopse - sinopse - sinopse</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" @click="prevSlide">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" @click="nextSlide">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
     </div>
-    <button class="carousel-control-prev" type="button" @click="prevSlide">
-      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Previous</span>
-    </button>
-    <button class="carousel-control-next" type="button" @click="nextSlide">
-      <span class="carousel-control-next-icon" aria-hidden="true"></span>
-      <span class="visually-hidden">Next</span>
-    </button>
-  </div>
 </template>
 
 <script>
 export default {
-  methods: {
-    nextSlide() {
-      const carousel = document.getElementById('carousel');
-      const instance = new bootstrap.Carousel(carousel);
-      instance.next();
-    },
-    prevSlide() {
-      const carousel = document.getElementById('carousel');
-      const instance = new bootstrap.Carousel(carousel);
-      instance.prev();
+    methods: {
+        nextSlide() {
+            const carousel = document.getElementById('carousel');
+            const instance = new bootstrap.Carousel(carousel);
+            instance.next();
+        },
+        prevSlide() {
+            const carousel = document.getElementById('carousel');
+            const instance = new bootstrap.Carousel(carousel);
+            instance.prev();
+        }
     }
-  }
 }
 </script>
 
 
 
 <style>
-.carousel {
-    background-color: #D4EFE6;
-    width: 100vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    overflow: hidden;
-}
-
-.carousel__wrapper {
-    display: flex;
-    flex-direction: row;
-	margin: 0 auto;
-	max-width: 80%;
-	align-items: center;
+.block__wrapper {
+    background-color: red;
+    width: 50%;
 }
 
 .carousel__img {
@@ -95,7 +66,7 @@ export default {
 }
 
 .carousel__titulo {
-	color: black;
+    color: black;
     font-family: "Inter", sans-serif;
     font-weight: bolder;
     font-size: larger;
@@ -103,7 +74,7 @@ export default {
 }
 
 .carousel__sinopse {
-	color: black;
+    color: black;
     font-family: "Inter", sans-serif;
     font-weight: normal;
     font-size: smaller;
@@ -113,5 +84,4 @@ export default {
 .carousel-control-next-icon {
     color: black !important;
 }
-
 </style>
