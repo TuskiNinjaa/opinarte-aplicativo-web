@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../css/main.css">
+    <link rel="stylesheet" href="../css/navigationbar.css">
+    <link rel="stylesheet" href="../css/signup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+    <title>Cadastro</title>
+</head>
+
+<body>
+    <nav class="navigationbar">
+        <a class="logo">OpinArte</a>
+
+        <search class="navigationbar__search">
+            <input type="text" placeholder="Busque no OpinArte">
+            <button type="submit" class="search__button">
+                <i class="fa-solid fa-magnifying-glass fa-1x"></i>
+            </button>
+        </search>
+
+        <menu class="navigationbar__menu">
+            <li><button class="menu__movies" href="">Filmes</button></li>
+            <li><button class="menu__series" href="">Séries</button></li>
+            <li><button class="menu__books" href="">Livros</button></li>
+            <li><button class="menu__login" href="login.html">Login</button></li>
+        </menu>
+    </nav>
+
+    <main>
+        <div class="login-container">
+            <h1>Cadastro</h1>
+            <form action="#" method="post">
+                <label for="username">Usuário:</label><br>
+                <input type="text" id="user" name="user" required><br><br>
+
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" required><br><br>
+
+                <label for="senha">Senha:</label><br>
+                <input type="password" id="senha" name="senha" required><br><br>
+
+                <div class="to-center">
+                    <button type="submit" class="login-bt">Cadastrar</button>
+                </div>
+            </form>
+        </div>
+    </main>
+
+</body>
+
+</html>
