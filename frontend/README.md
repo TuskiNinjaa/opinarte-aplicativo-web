@@ -10,7 +10,7 @@ Este modelo tem o objetivo de ajudar a começar o projeto com Vue 3 e Vite.
 
 Veja [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Configuração do ProjetO
+## Configuração do Projeto
 
 ```sh
 npm install
@@ -25,7 +25,7 @@ npm i --save @fortawesome/free-solid-svg-icons
 npm i --save @fortawesome/vue-fontawesome
 ```
 
-### Compilar e Recarregar para Desnvolvimento
+### Compilar e Recarregar para Desenvolvimento
 
 ```sh
 npm run dev
