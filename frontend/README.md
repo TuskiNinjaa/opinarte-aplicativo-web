@@ -1,14 +1,14 @@
 # opinarte-aplicativo-web-frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+Este modelo tem o objetivo de ajudar a começar o projeto com Vue 3 e Vite.
 
-## Recommended IDE Setup
+## Configuração de IDE Recomendada
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (e desabilite Vetur).
 
-## Customize configuration
+## Configuração Customizada
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+Veja [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ## Project Setup
 
