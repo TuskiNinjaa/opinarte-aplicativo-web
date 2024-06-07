@@ -10,13 +10,13 @@ Este modelo tem o objetivo de ajudar a começar o projeto com Vue 3 e Vite.
 
 Veja [Vite Configuration Reference](https://vitejs.dev/config/).
 
-## Project Setup
+## Configuração do ProjetO
 
 ```sh
 npm install
 ```
 
-Adding Font Awesome Icons and Bootstrap
+Adicionando ícones Font Awesome e Bootstrap
 
 ```sh
 npm install bootstrap
@@ -25,13 +25,13 @@ npm i --save @fortawesome/free-solid-svg-icons
 npm i --save @fortawesome/vue-fontawesome
 ```
 
-### Compile and Hot-Reload for Development
+### Compilar e Recarregar para Desnvolvimento
 
 ```sh
 npm run dev
 ```
 
-### Compile and Minify for Production
+### Compilar e Reduzir para Produção
 
 ```sh
 npm run build
