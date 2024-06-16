@@ -3,6 +3,7 @@ import App from './App.vue'
 import VueCarousel from '@chenfengyuan/vue-carousel';
 import router from './router'
 import 'bootstrap/dist/css/bootstrap.css'
+import 'bootstrap/dist/js/bootstrap.js'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faMagnifyingGlass, faThumbsUp, faThumbsDown, faComment, faPen, faUpRightFromSquare, faSliders } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
