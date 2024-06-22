@@ -44,11 +44,11 @@ public class UserService {
 	}
 
 	public void delete(Long id) {
-		userRepository.delete(findById(id));
+		userRepository.delete(this.findById(id));
 	}
 
 	public void replace(UserPutRequestBody userPutRequestBody) {
-		User userFound = findById(userPutRequestBody.getId());
+		User userFound = this.findById(userPutRequestBody.getId());
 		User user = UserMapper.INSTANCE.toUser(userPutRequestBody);
 		user.setId(userFound.getId());
 		userRepository.save(user);
