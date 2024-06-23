@@ -8,7 +8,7 @@ public class BookPutRequestBody {
     private Long id;
 
     private String title;
-    private Date release_date;
+    private Date releaseDate;
     private String genre;
     private String author;
     private String description;

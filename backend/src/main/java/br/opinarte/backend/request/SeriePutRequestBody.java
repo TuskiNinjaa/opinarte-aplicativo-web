@@ -8,7 +8,7 @@ public class SeriePutRequestBody {
     private Long id;
 
     private String title;
-    private Date release_date;
+    private Date releaseDate;
     private String genre;
     private String director;
     private Integer seasons;

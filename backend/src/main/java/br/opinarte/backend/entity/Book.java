@@ -33,7 +33,7 @@ public class Book {
     @NotEmpty(message = "The author cannot be empty")
     private String author;
 
-    private Date release_date;
+    private Date releaseDate;
     private String genre;
     private String description;    
 }

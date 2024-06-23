@@ -15,7 +15,7 @@ public interface SerieMapper {
     public static final SerieMapper INSTANCE = Mappers.getMapper(SerieMapper.class);
 
     @Mapping(target = "id", ignore = true)
-    @Mapping(target = "release_date", ignore = true)
+    @Mapping(target = "releaseDate", ignore = true)
     @Mapping(target = "genre", ignore = true)
     @Mapping(target = "director", ignore = true)
     @Mapping(target = "seasons", ignore = true)

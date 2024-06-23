@@ -15,7 +15,7 @@ public interface BookMapper {
     public static final BookMapper INSTANCE = Mappers.getMapper(BookMapper.class);
 
     @Mapping(target = "id", ignore = true)
-    @Mapping(target = "release_date", ignore = true)
+    @Mapping(target = "releaseDate", ignore = true)
     @Mapping(target = "genre", ignore = true)
     @Mapping(target = "author", ignore = true)
     @Mapping(target = "description", ignore = true)

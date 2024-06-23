@@ -30,7 +30,7 @@ public class Movie {
     @NotEmpty(message = "The title cannot be empty")
     private String title;
 
-    private Date release_date;
+    private Date releaseDate;
     private String genre;
     private String director;
     private String description;    
