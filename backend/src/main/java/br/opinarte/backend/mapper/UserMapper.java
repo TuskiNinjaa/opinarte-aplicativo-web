@@ -2,7 +2,6 @@ package br.opinarte.backend.mapper;
 
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
-import org.mapstruct.MappingConstants;
 import org.mapstruct.ReportingPolicy;
 import org.mapstruct.factory.Mappers;
 
@@ -10,7 +9,7 @@ import br.opinarte.backend.entity.User;
 import br.opinarte.backend.request.UserPostRequestBody;
 import br.opinarte.backend.request.UserPutRequestBody;
 
-@Mapper(componentModel = MappingConstants.ComponentModel.SPRING, unmappedSourcePolicy = ReportingPolicy.IGNORE)
+@Mapper(componentModel = "spring", unmappedSourcePolicy = ReportingPolicy.IGNORE)
 public abstract class UserMapper {
 	public static final UserMapper INSTANCE = Mappers.getMapper(UserMapper.class);
 
