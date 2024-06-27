@@ -31,45 +31,45 @@ import lombok.extern.log4j.Log4j2;
 @Log4j2
 @RequiredArgsConstructor
 public class BookController {
-    private final BookService bookService;
-    private final DateUtil dateUtil;
+	private final BookService bookService;
+	private final DateUtil dateUtil;
 
-    @GetMapping(path = "list")
-    public ResponseEntity<List<Book>> list() {
-        return ResponseEntity.ok(bookService.listAll());
-    }
-
-    @GetMapping
-    public ResponseEntity<Page<Book>> listPageable(Pageable pageable) {
-        return ResponseEntity.ok(bookService.listAll(pageable));
-    }
-
-    @GetMapping(path = "/{id}")
-    public ResponseEntity<Book> findById(@PathVariable Long id) {
-        return ResponseEntity.ok(bookService.findById(id));
-    }
-
-    @GetMapping(path = "/find-by-name")
-	public ResponseEntity<List<Book>> findByName(@RequestParam(required = false) String name) {
-		log.info(dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
-		return ResponseEntity.ok(bookService.findByName(name));
+	@GetMapping(path = "list")
+	public ResponseEntity<List<Book>> list() {
+		return ResponseEntity.ok(bookService.listAll());
 	}
 
-    @PostMapping
-    public ResponseEntity<Book> save(@RequestBody @Valid BookPostRequestBody bookPostRequestBody) {
-        log.info(dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
-        return new ResponseEntity<>(bookService.save(bookPostRequestBody), HttpStatus.CREATED);
-    }
+	@GetMapping
+	public ResponseEntity<Page<Book>> listPageable(Pageable pageable) {
+		return ResponseEntity.ok(bookService.listAll(pageable));
+	}
 
-    @DeleteMapping(path = "/{id}")
-    public ResponseEntity<Void> delete(@PathVariable Long id) {
-        bookService.delete(id);
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-    }
+	@GetMapping(path = "/{id}")
+	public ResponseEntity<Book> findById(@PathVariable Long id) {
+		return ResponseEntity.ok(bookService.findById(id));
+	}
 
-    @PutMapping
-    public ResponseEntity<Void> replace(@RequestBody @Valid BookPutRequestBody bookPutRequestBody) {
-        bookService.replace(bookPutRequestBody);
-        return new ResponseEntity<>(HttpStatus.NO_CONTENT);
-    }
+	@GetMapping(path = "/find-by-title")
+	public ResponseEntity<List<Book>> findByTitle(@RequestParam(required = false) String name) {
+		log.info(dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
+		return ResponseEntity.ok(bookService.findByTitle(name));
+	}
+
+	@PostMapping
+	public ResponseEntity<Book> save(@RequestBody @Valid BookPostRequestBody bookPostRequestBody) {
+		log.info(dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
+		return new ResponseEntity<>(bookService.save(bookPostRequestBody), HttpStatus.CREATED);
+	}
+
+	@DeleteMapping(path = "/{id}")
+	public ResponseEntity<Void> delete(@PathVariable Long id) {
+		bookService.delete(id);
+		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+	}
+
+	@PutMapping
+	public ResponseEntity<Void> replace(@RequestBody @Valid BookPutRequestBody bookPutRequestBody) {
+		bookService.replace(bookPutRequestBody);
+		return new ResponseEntity<>(HttpStatus.NO_CONTENT);
+	}
 }

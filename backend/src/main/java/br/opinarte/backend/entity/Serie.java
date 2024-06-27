@@ -23,16 +23,16 @@ import jakarta.persistence.GenerationType;
 @EntityListeners(AuditingEntityListener.class)
 @Table(name = "serie")
 public class Serie {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-    @NotEmpty(message = "The title cannot be empty")
-    private String title;
+	@NotEmpty(message = "The title cannot be empty")
+	private String name;
 
-    private Date releaseDate;
-    private String genre;
-    private String director;
-    private Integer seasons;
-    private String description;    
+	private Date releaseDate;
+	private String genre;
+	private String director;
+	private Integer seasons;
+	private String description;
 }

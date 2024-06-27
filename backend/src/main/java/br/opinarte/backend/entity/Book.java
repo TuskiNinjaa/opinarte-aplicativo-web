@@ -23,17 +23,17 @@ import jakarta.persistence.GenerationType;
 @EntityListeners(AuditingEntityListener.class)
 @Table(name = "book")
 public class Book {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-    @NotEmpty(message = "The title cannot be empty")
-    private String title;
+	@NotEmpty(message = "The name cannot be empty")
+	private String name;
 
-    @NotEmpty(message = "The author cannot be empty")
-    private String author;
+	@NotEmpty(message = "The author cannot be empty")
+	private String author;
 
-    private Date releaseDate;
-    private String genre;
-    private String description;    
+	private Date releaseDate;
+	private String genre;
+	private String description;
 }

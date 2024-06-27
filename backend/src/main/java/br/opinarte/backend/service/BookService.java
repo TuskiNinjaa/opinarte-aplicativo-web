@@ -19,38 +19,38 @@ import lombok.RequiredArgsConstructor;
 @Service
 @RequiredArgsConstructor
 public class BookService {
-    private final BookRepository bookRepository;
+	private final BookRepository bookRepository;
 
-    @Transactional
-    public Book save(@Valid BookPostRequestBody bookPostRequestBody) {
-        return bookRepository.save(BookMapper.INSTANCE.toBook(bookPostRequestBody));
-    }
+	@Transactional
+	public Book save(@Valid BookPostRequestBody bookPostRequestBody) {
+		return bookRepository.save(BookMapper.INSTANCE.toBook(bookPostRequestBody));
+	}
 
-    public List<Book> listAll() {
-        return bookRepository.findAll();
-    }
+	public List<Book> listAll() {
+		return bookRepository.findAll();
+	}
 
-    public Page<Book> listAll(Pageable pageable) {
-        return bookRepository.findAll(pageable);
-    }
+	public Page<Book> listAll(Pageable pageable) {
+		return bookRepository.findAll(pageable);
+	}
 
-    public Book findById(Long id) {
-        return bookRepository.findById(id)
-                .orElseThrow(() -> new BadRequestException("Book not found"));
-    }
+	public Book findById(Long id) {
+		return bookRepository.findById(id)
+				.orElseThrow(() -> new BadRequestException("Book not found"));
+	}
 
-    public List<Book> findByName(String name) {
+	public List<Book> findByName(String name) {
 		return bookRepository.findByName(name);
 	}
 
-    public void delete(Long id) {
-        bookRepository.delete(this.findById(id));
-    }
+	public void delete(Long id) {
+		bookRepository.delete(this.findById(id));
+	}
 
-    public void replace(@Valid BookPutRequestBody bookPutRequestBody) {
-        Book bookFound = this.findById(bookPutRequestBody.getId());
-        Book book = BookMapper.INSTANCE.toBook(bookPutRequestBody);
-        book.setId(bookFound.getId());
-        bookRepository.save(book);
-    }
+	public void replace(@Valid BookPutRequestBody bookPutRequestBody) {
+		Book bookFound = this.findById(bookPutRequestBody.getId());
+		Book book = BookMapper.INSTANCE.toBook(bookPutRequestBody);
+		book.setId(bookFound.getId());
+		bookRepository.save(book);
+	}
 }
