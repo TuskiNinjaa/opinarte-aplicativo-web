@@ -49,10 +49,10 @@ public class BookController {
 		return ResponseEntity.ok(bookService.findById(id));
 	}
 
-	@GetMapping(path = "/find-by-title")
-	public ResponseEntity<List<Book>> findByTitle(@RequestParam(required = false) String name) {
+	@GetMapping(path = "/find-by-name")
+	public ResponseEntity<List<Book>> findByName(@RequestParam(required = false) String name) {
 		log.info(dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
-		return ResponseEntity.ok(bookService.findByTitle(name));
+		return ResponseEntity.ok(bookService.findByName(name));
 	}
 
 	@PostMapping

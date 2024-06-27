@@ -30,9 +30,18 @@ public class Serie {
 	@NotEmpty(message = "The title cannot be empty")
 	private String name;
 
-	private Date releaseDate;
-	private String genre;
-	private String director;
+	@NotEmpty(message = "The seasons cannot be empty")
 	private Integer seasons;
+
+	@NotEmpty(message = "The release date cannot be empty")
+	private Date releaseDate;
+
+	@NotEmpty(message = "The genre cannot be empty")
+	private String genre;
+
+	@NotEmpty(message = "The director cannot be empty")
+	private String director;
+
+	@NotEmpty(message = "The description cannot be empty")
 	private String description;
 }

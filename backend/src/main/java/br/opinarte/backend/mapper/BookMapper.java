@@ -12,14 +12,10 @@ import br.opinarte.backend.request.BookPutRequestBody;
 
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING, unmappedSourcePolicy = ReportingPolicy.IGNORE)
 public interface BookMapper {
-    public static final BookMapper INSTANCE = Mappers.getMapper(BookMapper.class);
+	public static final BookMapper INSTANCE = Mappers.getMapper(BookMapper.class);
 
-    @Mapping(target = "id", ignore = true)
-    @Mapping(target = "releaseDate", ignore = true)
-    @Mapping(target = "genre", ignore = true)
-    @Mapping(target = "author", ignore = true)
-    @Mapping(target = "description", ignore = true)
-    public abstract Book toBook(BookPostRequestBody bookPostRequestBody);
+	@Mapping(target = "id", ignore = true)
+	public abstract Book toBook(BookPostRequestBody bookPostRequestBody);
 
-    public abstract Book toBook(BookPutRequestBody bookPutRequestBody);
+	public abstract Book toBook(BookPutRequestBody bookPutRequestBody);
 }

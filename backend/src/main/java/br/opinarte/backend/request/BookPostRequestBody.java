@@ -1,13 +1,24 @@
 package br.opinarte.backend.request;
 
+import java.util.Date;
+
 import jakarta.validation.constraints.NotEmpty;
 import lombok.Data;
 
 @Data
 public class BookPostRequestBody {
-    @NotEmpty(message = "The title cannot be empty")
-    private String title;
+	@NotEmpty(message = "The name cannot be empty")
+	private String name;
 
-    @NotEmpty(message = "The author cannot be empty")
+	@NotEmpty(message = "The author cannot be empty")
 	private String author;
+
+	@NotEmpty(message = "The Release Date cannot be empty")
+	private Date releaseDate;
+
+	@NotEmpty(message = "The Genre cannot be empty")
+	private String genre;
+
+	@NotEmpty(message = "The Description cannot be empty")
+	private String description;
 }

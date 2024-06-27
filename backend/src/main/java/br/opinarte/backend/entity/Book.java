@@ -2,6 +2,7 @@ package br.opinarte.backend.entity;
 
 import java.util.Date;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.EntityListeners;
@@ -34,6 +35,10 @@ public class Book {
 	private String author;
 
 	private Date releaseDate;
+
+	@NotEmpty(message = "The Genre cannot be empty")
 	private String genre;
+
+	@NotEmpty(message = "The Description cannot be empty")
 	private String description;
 }

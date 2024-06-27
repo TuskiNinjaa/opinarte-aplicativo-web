@@ -12,14 +12,10 @@ import br.opinarte.backend.request.MoviePutRequestBody;
 
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING, unmappedSourcePolicy = ReportingPolicy.IGNORE)
 public interface MovieMapper {
-    public static final MovieMapper INSTANCE = Mappers.getMapper(MovieMapper.class);
+	public static final MovieMapper INSTANCE = Mappers.getMapper(MovieMapper.class);
 
-    @Mapping(target = "id", ignore = true)
-    @Mapping(target = "releaseDate", ignore = true)
-    @Mapping(target = "genre", ignore = true)
-    @Mapping(target = "director", ignore = true)
-    @Mapping(target = "description", ignore = true)
-    public abstract Movie toMovie(MoviePostRequestBody moviePostRequestBody);
+	@Mapping(target = "id", ignore = true)
+	public abstract Movie toMovie(MoviePostRequestBody moviePostRequestBody);
 
-    public abstract Movie toMovie(MoviePutRequestBody moviePutRequestBody);
+	public abstract Movie toMovie(MoviePutRequestBody moviePutRequestBody);
 }

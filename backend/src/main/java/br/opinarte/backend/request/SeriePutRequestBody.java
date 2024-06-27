@@ -5,12 +5,12 @@ import lombok.Data;
 
 @Data
 public class SeriePutRequestBody {
-    private Long id;
+	private Long id;
 
-    private String title;
-    private Date releaseDate;
-    private String genre;
-    private String director;
-    private Integer seasons;
-    private String description;
+	private String name;
+	private Date releaseDate;
+	private String genre;
+	private String director;
+	private Integer seasons;
+	private String description;
 }
