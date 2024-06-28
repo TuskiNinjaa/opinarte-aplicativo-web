@@ -48,7 +48,7 @@ public class UserService {
 	}
 
 	public void replace(UserPutRequestBody userPutRequestBody) {
-		User userFound = this.findById(userPutRequestBody.getId());
+		User userFound = findById(userPutRequestBody.getId());
 		User user = UserMapper.INSTANCE.toUser(userPutRequestBody);
 		user.setId(userFound.getId());
 		userRepository.save(user);
