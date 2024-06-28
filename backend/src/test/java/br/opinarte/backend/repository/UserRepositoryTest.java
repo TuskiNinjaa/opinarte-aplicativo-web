@@ -10,6 +10,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
 
 import br.opinarte.backend.entity.User;
+import br.opinarte.backend.util.UserCreator;
 import jakarta.validation.ConstraintViolationException;
 
 @DataJpaTest
@@ -21,7 +22,7 @@ public class UserRepositoryTest {
 	@Test
 	@DisplayName("Save updates user when succssesful")
 	void save_PersistUser_WhenSuccessful() {
-		User userToBeSaved = createUser();
+		User userToBeSaved = UserCreator.createUserToBeSaved();
 		User userSaved = this.userRepository.save(userToBeSaved);
 
 		Assertions.assertThat(userSaved).isNotNull();
@@ -33,8 +34,8 @@ public class UserRepositoryTest {
 
 	@Test
 	@DisplayName("Save deletes user when succssesful")
-	void save_DeletesAnime_WhenSuccessful() {
-		User userToBeSaved = createUser();
+	void save_DeletesUser_WhenSuccessful() {
+		User userToBeSaved = UserCreator.createUserToBeSaved();
 		User userSaved = this.userRepository.save(userToBeSaved);
 
 		this.userRepository.delete(userSaved);
@@ -45,9 +46,24 @@ public class UserRepositoryTest {
 	}
 
 	@Test
+	@DisplayName("Save updates user when succssesful")
+	void save_ReplaceUser_WhenSuccessful() {
+		User userToBeSaved = UserCreator.createUserToBeSaved();
+		User userSaved = this.userRepository.save(userToBeSaved);
+		User userUpdate = UserCreator.createUserUpdated(userSaved);
+		User userUpdated = this.userRepository.save(userUpdate);
+
+		Assertions.assertThat(userUpdate).isNotNull();
+		Assertions.assertThat(userUpdate.getId()).isNotNull();
+		Assertions.assertThat(userUpdate.getName()).isEqualTo(userUpdated.getName());
+		Assertions.assertThat(userUpdate.getPassword()).isEqualTo(userUpdated.getPassword());
+		Assertions.assertThat(userUpdate.getCreatedDate()).isEqualTo(userUpdated.getCreatedDate());
+	}
+
+	@Test
 	@DisplayName("Find By Name returns list of user when succssesful")
 	void findByName_ReturnsListOfANime_WhenSuccessful() {
-		User userToBeSaved = createUser();
+		User userToBeSaved = UserCreator.createUserToBeSaved();
 		User userSaved = this.userRepository.save(userToBeSaved);
 
 		String name = userSaved.getName();
@@ -70,7 +86,7 @@ public class UserRepositoryTest {
 	@Test
 	@DisplayName("Save throw ConstraintValidationException when name is empty")
 	void save_ThrowsConstraintValidationException_WhenNameIsEmpty() {
-		User user = createUser();
+		User user = UserCreator.createUserValid();
 		user.setName(null);
 
 		Assertions.assertThatExceptionOfType(ConstraintViolationException.class)
@@ -81,7 +97,7 @@ public class UserRepositoryTest {
 	@Test
 	@DisplayName("Save throw ConstraintValidationException when email is empty")
 	void save_ThrowsConstraintValidationException_WhenEmailIsEmpty() {
-		User user = createUser();
+		User user = UserCreator.createUserValid();
 		user.setEmail(null);
 
 		Assertions.assertThatExceptionOfType(ConstraintViolationException.class)
@@ -92,7 +108,7 @@ public class UserRepositoryTest {
 	@Test
 	@DisplayName("Save throw ConstraintValidationException when password is empty")
 	void save_ThrowsConstraintValidationException_WhenPasswordIsEmpty() {
-		User user = createUser();
+		User user = UserCreator.createUserValid();
 		user.setPassword(null);
 
 		Assertions.assertThatExceptionOfType(ConstraintViolationException.class)
@@ -103,19 +119,11 @@ public class UserRepositoryTest {
 	@Test
 	@DisplayName("Save throw ConstraintValidationException when email ill-formed")
 	void save_ThrowsConstraintValidationException_WhenEmailIsIllFormed() {
-		User user = createUser();
+		User user = UserCreator.createUserValid();
 		user.setEmail("Bad Email Name");
 
 		Assertions.assertThatExceptionOfType(ConstraintViolationException.class)
 				.isThrownBy(() -> this.userRepository.save(user))
 				.withMessageContaining("The email should be well-formed");
-	}
-
-	private User createUser() {
-		return User.builder()
-				.name("Fulano de Tal")
-				.email("fulano@email.com")
-				.password("123456")
-				.build();
 	}
 }

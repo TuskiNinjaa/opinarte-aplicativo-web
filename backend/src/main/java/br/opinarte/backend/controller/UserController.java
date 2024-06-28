@@ -1,6 +1,5 @@
 package br.opinarte.backend.controller;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.data.domain.Page;
@@ -21,18 +20,14 @@ import br.opinarte.backend.entity.User;
 import br.opinarte.backend.request.UserPostRequestBody;
 import br.opinarte.backend.request.UserPutRequestBody;
 import br.opinarte.backend.service.UserService;
-import br.opinarte.backend.util.DateUtil;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.log4j.Log4j2;
 
 @RestController
 @RequestMapping(path = "user")
-@Log4j2
 @RequiredArgsConstructor
 public class UserController {
 	private final UserService userService;
-	private final DateUtil dateUtil;
 
 	@GetMapping(path = "list")
 	public ResponseEntity<List<User>> list() {
@@ -41,7 +36,7 @@ public class UserController {
 
 	@GetMapping
 	public ResponseEntity<Page<User>> listPageable(Pageable pageable) {
-		return ResponseEntity.ok(userService.listAll(pageable));
+		return ResponseEntity.ok(userService.listAllPageable(pageable));
 	}
 
 	@GetMapping(path = "/{id}")
@@ -51,13 +46,11 @@ public class UserController {
 
 	@GetMapping(path = "/find-by-name")
 	public ResponseEntity<List<User>> findByName(@RequestParam(required = false) String name) {
-		log.info(dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
 		return ResponseEntity.ok(userService.findByName(name));
 	}
 
 	@PostMapping
 	public ResponseEntity<User> save(@RequestBody @Valid UserPostRequestBody userPostRequestBody) {
-		log.info(dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
 		return new ResponseEntity<>(userService.save(userPostRequestBody), HttpStatus.CREATED);
 	}
 

@@ -1,6 +1,5 @@
 package br.opinarte.backend.repository;
 
-import java.time.LocalDate;
 import java.util.Date;
 
 import org.assertj.core.api.Assertions;

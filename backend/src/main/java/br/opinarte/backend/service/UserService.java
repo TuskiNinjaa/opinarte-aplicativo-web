@@ -30,7 +30,7 @@ public class UserService {
 		return userRepository.findAll();
 	}
 
-	public Page<User> listAll(Pageable pageable) {
+	public Page<User> listAllPageable(Pageable pageable) {
 		return userRepository.findAll(pageable);
 	}
 

@@ -37,6 +37,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 				HttpStatus.BAD_REQUEST);
 	}
 
+	@SuppressWarnings("null")
 	@Override
 	@Nullable
 	protected ResponseEntity<Object> handleMethodArgumentNotValid(
@@ -58,6 +59,7 @@ public class RestExceptionHandler extends ResponseEntityExceptionHandler {
 				HttpStatus.BAD_REQUEST);
 	}
 
+	@SuppressWarnings("null")
 	@Override
 	@Nullable
 	protected ResponseEntity<Object> handleExceptionInternal(
