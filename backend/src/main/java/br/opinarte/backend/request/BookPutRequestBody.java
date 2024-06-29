@@ -5,11 +5,11 @@ import lombok.Data;
 
 @Data
 public class BookPutRequestBody {
-    private Long id;
+	private Long id;
 
-    private String title;
-    private Date releaseDate;
-    private String genre;
-    private String author;
-    private String description;
+	private String name;
+	private Date releaseDate;
+	private String genre;
+	private String author;
+	private String description;
 }

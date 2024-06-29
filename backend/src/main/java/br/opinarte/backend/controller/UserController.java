@@ -45,7 +45,7 @@ public class UserController {
 	}
 
 	@GetMapping(path = "/find-by-name")
-	public ResponseEntity<List<User>> findByName(@RequestParam(required = false) String name) {
+	public ResponseEntity<List<User>> findByName(@RequestParam(required = true) String name) {
 		return ResponseEntity.ok(userService.findByName(name));
 	}
 

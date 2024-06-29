@@ -2,7 +2,13 @@ package br.opinarte.backend.request;
 
 import java.util.Date;
 
+import org.springframework.format.annotation.DateTimeFormat;
+
+import jakarta.persistence.GeneratedValue;
+import jakarta.persistence.GenerationType;
+import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.PastOrPresent;
 import lombok.Data;
 
 @Data
@@ -10,7 +16,8 @@ public class MoviePostRequestBody {
 	@NotEmpty(message = "The name cannot be empty")
 	private String name;
 
-	@NotEmpty(message = "The release date cannot be empty")
+	@DateTimeFormat(pattern = "yyyy-MM-dd")
+	@PastOrPresent
 	private Date releaseDate;
 
 	@NotEmpty(message = "The genre cannot be empty")

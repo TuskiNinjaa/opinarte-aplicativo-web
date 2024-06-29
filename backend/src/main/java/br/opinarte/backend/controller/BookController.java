@@ -1,6 +1,5 @@
 package br.opinarte.backend.controller;
 
-import java.time.LocalDateTime;
 import java.util.List;
 
 import org.springframework.data.domain.Page;
@@ -21,18 +20,14 @@ import br.opinarte.backend.entity.Book;
 import br.opinarte.backend.request.BookPostRequestBody;
 import br.opinarte.backend.request.BookPutRequestBody;
 import br.opinarte.backend.service.BookService;
-import br.opinarte.backend.util.DateUtil;
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
-import lombok.extern.log4j.Log4j2;
 
 @RestController
 @RequestMapping(path = "book")
-@Log4j2
 @RequiredArgsConstructor
 public class BookController {
 	private final BookService bookService;
-	private final DateUtil dateUtil;
 
 	@GetMapping(path = "list")
 	public ResponseEntity<List<Book>> list() {
@@ -50,14 +45,12 @@ public class BookController {
 	}
 
 	@GetMapping(path = "/find-by-name")
-	public ResponseEntity<List<Book>> findByName(@RequestParam(required = false) String name) {
-		log.info(dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
+	public ResponseEntity<List<Book>> findByName(@RequestParam(required = true) String name) {
 		return ResponseEntity.ok(bookService.findByName(name));
 	}
 
 	@PostMapping
 	public ResponseEntity<Book> save(@RequestBody @Valid BookPostRequestBody bookPostRequestBody) {
-		log.info(dateUtil.formatLocalDateTimeToDatabaseStyle(LocalDateTime.now()));
 		return new ResponseEntity<>(bookService.save(bookPostRequestBody), HttpStatus.CREATED);
 	}
 
