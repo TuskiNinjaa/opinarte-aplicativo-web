@@ -29,7 +29,7 @@ Obs: Para que o frontend funcione é preciso que o backend e o banco de dados es
 
 ## Pré-Requisitos
 
-Antes de começar, é preciso ter instalado em sua máquina as seguintes ferramentas: [Git](https://git-scm.com/), [Node.js](https://nodejs.org/). Além de outras dependências e ferramentas específicas para cada parte da aplicação. Também é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/)
+Antes de começar, é preciso ter instalado em sua máquina as seguintes ferramentas: [Git](https://git-scm.com/), [Node.js](https://nodejs.org/). Além de outras dependências e ferramentas específicas para cada parte da aplicação. Também é bom ter um editor para trabalhar com o código como [VSCode](https://code.visualstudio.com/).
 
 ## Tecnologias
 
