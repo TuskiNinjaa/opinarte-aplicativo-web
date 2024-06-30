@@ -4,9 +4,9 @@ Este módulo é dedicado a explicar sobre o que foi estipulado para o backend da
 
 ## Sobre o Backend
 
-Foram desenvolvidas as ações necessárias para usuários(_user_), críticas(_review_) e para cada tipo de obras disponíveis para avaliação, sendo elas filmes(_movie_), livros(_book_) e séries(_serie_). 
+Foram desenvolvidas as ações necessárias para usuários(_user_), críticas(_review_) e para cada tipo de obras disponíveis para avaliação, sendo elas filmes(_movie_), livros (_book_) e séries (_serie_). 
 
-A implementação foi realizada utilizando o modelo CRUD, que consiste em uma série de funções para leitura e manipulação do banco de dados, focando em criação(_Create_), leitura(_Read_), atualização(__Update) e exclusão(_Delete_). Como foi utilizado o framework [Spring Boot](https://spring.io/), as respectivas funções usadas foram:
+A implementação foi realizada utilizando o modelo CRUD, que consiste em uma série de funções para leitura e manipulação do banco de dados, focando em criação (_Create_), leitura (_Read_), atualização (_Update_) e exclusão (_Delete_). Como foi utilizado o framework [Spring Boot](https://spring.io/), as respectivas funções usadas foram:
 
 * POST, para a parte de criação;
 * GET, para a parte de leitura;
