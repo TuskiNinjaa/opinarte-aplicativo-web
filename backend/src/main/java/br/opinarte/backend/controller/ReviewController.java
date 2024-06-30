@@ -9,7 +9,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import br.opinarte.backend.entity.Review;
-import br.opinarte.backend.entity.Review;
 import br.opinarte.backend.request.ReviewPostRequestBody;
 import br.opinarte.backend.request.ReviewPutRequestBody;
 import br.opinarte.backend.service.ReviewService;
