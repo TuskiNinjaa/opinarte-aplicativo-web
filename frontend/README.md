@@ -13,13 +13,13 @@ Foram definidas 6 (seis) páginas para a aplicação OpinArte, sendo descrito no
 * _Página de Perfil_: tela com as informações do usuário cadastrado, que inclui os dados básicos do usuário, como foto de perfil, nome, e-mail e data de aniversário, sendo possível acessar as críticas adicionadas pelo usuário e adicionar uma nova obra não cadastrada na aplicação;
 * _Página de Buscas_: tela que possibilita a busca por uma obra específica. 
 
-## Ferramentas
+## Pré-Requisitos
 
 As seguintes ferramentas foram utilizadas para a execução do frontend:
-* [Node.js](https://nodejs.org/)
-* [Vue.js](https://vuejs.org/), 
-* [Vite](https://vitejs.dev/), 
-* [Spring Boot](https://spring.io/)
+* [Node.js](https://nodejs.org/);
+* [Vue.js](https://vuejs.org/);
+* [Vite](https://vitejs.dev/);
+* [Spring Boot](https://spring.io/).
 
 ## Como executar o frontend
 
@@ -32,6 +32,8 @@ As seguintes ferramentas foram utilizadas para a execução do frontend:
 Veja [Vite Configuration Reference](https://vitejs.dev/config/).
 
 ### Configuração do Projeto
+
+Para executar o frontend, é necessário realizar os seguintes comandos:
 
 ```sh
 npm install
