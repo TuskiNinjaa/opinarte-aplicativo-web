@@ -40,7 +40,7 @@ As seguintes ferramentas foram utilizadas para a realização do projeto: [Vue.j
 ## Contribuidores
 
 * [Fernanda L. M. Mascarenhas](https://github.com/FernandaMascarenhas)
-* [Pedro Arfux P. C. de Castro](https://github.com/SafeMantella)
-* [Raissa Rinaldi Yoshioka](https://github.com/Raissa-Yoshioka)
-* [Vitor Yuske Watanabe](https://github.com/TuskiNinjaa)
+* [Pedro A. P. C. de Castro](https://github.com/SafeMantella)
+* [Raissa R. Yoshioka](https://github.com/Raissa-Yoshioka)
+* [Vitor Y. Watanabe](https://github.com/TuskiNinjaa)
 
