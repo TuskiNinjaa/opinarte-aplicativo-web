@@ -12,12 +12,12 @@ import br.opinarte.backend.request.ReviewPutRequestBody;
 
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING, unmappedSourcePolicy = ReportingPolicy.IGNORE)
 public interface ReviewMapper {
-    public static final ReviewMapper INSTANCE = Mappers.getMapper(ReviewMapper.class);
+	public static final ReviewMapper INSTANCE = Mappers.getMapper(ReviewMapper.class);
 
-    @Mapping(target = "reviewId", ignore = true)
-    @Mapping(target = "reviewDate", ignore = true)
-    public abstract Review toReview(ReviewPostRequestBody reviewPostRequestBody);
+	@Mapping(target = "id", ignore = true)
+	@Mapping(target = "createdDate", ignore = true)
+	public abstract Review toReview(ReviewPostRequestBody reviewPostRequestBody);
 
-    @Mapping(target = "reviewDate", ignore = true)
-    public abstract Review toReview(ReviewPutRequestBody reviewPutRequestBody);
+	@Mapping(target = "createdDate", ignore = true)
+	public abstract Review toReview(ReviewPutRequestBody reviewPutRequestBody);
 }

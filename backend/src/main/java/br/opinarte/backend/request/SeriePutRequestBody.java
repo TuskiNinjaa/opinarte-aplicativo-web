@@ -6,7 +6,6 @@ import lombok.Data;
 @Data
 public class SeriePutRequestBody {
 	private Long id;
-
 	private String name;
 	private Date releaseDate;
 	private String genre;

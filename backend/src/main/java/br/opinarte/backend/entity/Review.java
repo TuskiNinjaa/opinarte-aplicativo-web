@@ -1,6 +1,10 @@
 package br.opinarte.backend.entity;
 
-import java.time.LocalDateTime;
+import java.util.Date;
+
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
 import jakarta.persistence.*;
 import jakarta.validation.constraints.*;
 
@@ -14,27 +18,36 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 @Entity
-@Table(name = "reviews")
+@EntityListeners(AuditingEntityListener.class)
+@Table(name = "review")
 public class Review {
-    @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long reviewId;
+	@Id
+	@GeneratedValue(strategy = GenerationType.IDENTITY)
+	private Long id;
 
-    @NotNull(message = "The user ID cannot be null")
-    private Long userId;
+	@NotNull(message = "The user ID cannot be null")
+	@Positive(message = "The user ID must be positive")
+	private Long userId;
 
-    @NotNull(message = "The media type cannot be null")
-    @Pattern(regexp = "movie|series|book", message = "The media type must be 'movie', 'series', or 'book'")
-    private String mediaType;
+	@NotNull(message = "The media ID cannot be null")
+	@Positive(message = "The media ID must be positive")
+	private Long mediaId;
 
-    @NotNull(message = "The media ID cannot be null")
-    private Long mediaId;
+	@NotNull(message = "The media type cannot be null")
+	@Pattern(regexp = "movie|series|book", message = "The media type must be 'movie', 'series', or 'book'")
+	private String mediaType;
 
-    @Min(value = 1, message = "The rating must be at least 1")
-    @Max(value = 10, message = "The rating must be at most 10")
-    private Integer rating;
+	@Min(value = 1, message = "The rating must be at least 1")
+	@Max(value = 10, message = "The rating must be at most 10")
+	private Integer rating;
 
-    private String reviewText;
+	@NotEmpty(message = "The title cannot be empty")
+	private String title;
 
-    private LocalDateTime reviewDate;
+	@NotEmpty(message = "The review text cannot be empty")
+	private String reviewText;
+
+	@Temporal(TemporalType.TIMESTAMP)
+	@CreatedDate
+	private Date createdDate;
 }

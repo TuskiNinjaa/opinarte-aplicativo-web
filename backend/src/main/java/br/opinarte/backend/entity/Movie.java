@@ -10,6 +10,7 @@ import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -34,6 +35,7 @@ public class Movie {
 
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@PastOrPresent
+	@NotNull(message = "The date cannot be null")
 	private Date releaseDate;
 
 	@NotEmpty(message = "The genre cannot be empty")

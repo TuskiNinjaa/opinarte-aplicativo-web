@@ -17,5 +17,6 @@ public abstract class UserMapper {
 	@Mapping(target = "createdDate", ignore = true)
 	public abstract User toUser(UserPostRequestBody userPostRequestBody);
 
+	@Mapping(target = "createdDate", ignore = true)
 	public abstract User toUser(UserPutRequestBody userPutRequestBody);
 }

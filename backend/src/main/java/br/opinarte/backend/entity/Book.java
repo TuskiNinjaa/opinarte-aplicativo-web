@@ -4,13 +4,13 @@ import java.util.Date;
 import org.springframework.data.jpa.domain.support.AuditingEntityListener;
 import org.springframework.format.annotation.DateTimeFormat;
 
-import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.EntityListeners;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -38,6 +38,7 @@ public class Book {
 
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@PastOrPresent
+	@NotNull(message = "The date cannot be null")
 	private Date releaseDate;
 
 	@NotEmpty(message = "The Genre cannot be empty")

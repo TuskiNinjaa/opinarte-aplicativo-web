@@ -4,10 +4,8 @@ import java.util.Date;
 
 import org.springframework.format.annotation.DateTimeFormat;
 
-import jakarta.persistence.GeneratedValue;
-import jakarta.persistence.GenerationType;
-import jakarta.persistence.Id;
 import jakarta.validation.constraints.NotEmpty;
+import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.PastOrPresent;
 import lombok.Data;
 
@@ -18,6 +16,7 @@ public class MoviePostRequestBody {
 
 	@DateTimeFormat(pattern = "yyyy-MM-dd")
 	@PastOrPresent
+	@NotNull(message = "The date cannot be null")
 	private Date releaseDate;
 
 	@NotEmpty(message = "The genre cannot be empty")

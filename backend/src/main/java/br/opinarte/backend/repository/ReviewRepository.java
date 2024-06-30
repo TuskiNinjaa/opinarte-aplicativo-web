@@ -9,5 +9,9 @@ import br.opinarte.backend.entity.Review;
 
 @Repository
 public interface ReviewRepository extends JpaRepository<Review, Long> {
+	List<Review> findByMediaType(String mediaType);
+
 	List<Review> findByMediaTypeAndMediaId(String mediaType, Long mediaId);
+
+	List<Review> findByUserId(Long userId);
 }

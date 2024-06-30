@@ -51,6 +51,7 @@ public class UserService {
 		User userFound = findById(userPutRequestBody.getId());
 		User user = UserMapper.INSTANCE.toUser(userPutRequestBody);
 		user.setId(userFound.getId());
+		user.setCreatedDate(userFound.getCreatedDate());
 		userRepository.save(user);
 	}
 
